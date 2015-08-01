@@ -11,24 +11,24 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet var quoteLabel: UILabel
-    @IBOutlet var leftImage: UIImageView
-    @IBOutlet var midImage: UIImageView
-    @IBOutlet var rightImage: UIImageView
+    @IBOutlet var quoteLabel: UILabel!
+    @IBOutlet var leftImage: UIImageView!
+    @IBOutlet var midImage: UIImageView!
+    @IBOutlet var rightImage: UIImageView!
     
     var timer = NSTimer()
     var quoteTime:NSTimeInterval = 5.0
     var lastLocation = CGPoint.self.zeroPoint
-    var originalPosition: Float = 0.0
-    let frankImage = UIImage(named: "frank-zappa_young_circle.jpg") as UIImage
-    let tomImage = UIImage(named: "tom1_circle.jpg") as UIImage
-    let wernerImage = UIImage(named: "werner-herzog2_circle.jpg") as UIImage
+    var originalPosition: CGFloat = 0.0
+    let frankImage = UIImage(named: "frank-zappa_young_circle.jpg") as UIImage?
+    let tomImage = UIImage(named: "tom1_circle.jpg") as UIImage?
+    let wernerImage = UIImage(named: "werner-herzog2_circle.jpg") as UIImage?
     var heightFloat: Float = 0.0
     var topThirdMark: Float = 0.0
     var bottomThirdMark: Float = 0.0
     var widthFloat: Float = 0.0
-    var leftThirdMark: Float = 0.0
-    var rightThirdMark: Float = 0.0
+    var leftThirdMark: CGFloat = 0.0
+    var rightThirdMark: CGFloat = 0.0
     var correctTag: Int = -1
     var swipes: Int = 0
     var answerTag: Int = 6
@@ -55,12 +55,12 @@ class FirstViewController: UIViewController {
         topThirdMark = Float(heightFloat/3)
         bottomThirdMark = Float(topThirdMark * 2)
         widthFloat = Float(self.view.frame.size.width)
-        leftThirdMark = (widthFloat/3)
+        leftThirdMark = CGFloat(widthFloat/3)
         rightThirdMark = (leftThirdMark * 2)
         
-        leftImageCenter = leftImage.center
-        midImageCenter = midImage.center
-        rightImageCenter = rightImage.center
+        leftImageCenter = leftImage!.center
+        midImageCenter = midImage!.center
+        rightImageCenter = rightImage!.center
         
         prepForGame()
     }
@@ -104,7 +104,7 @@ class FirstViewController: UIViewController {
             quoteTime += 2.5
         }
         println("Quote Length: \(quoteAuthor.quote.length)")
-        quoteLabel.text = "\"" + quoteAuthor.quote + "\""
+        quoteLabel.text = "\"" + (quoteAuthor.quote as String) + "\""
         quoteLabel.sizeToFit()
         correctTag = quoteAuthor.author
         
@@ -122,7 +122,7 @@ class FirstViewController: UIViewController {
             },  completion: {
                 (value: Bool) in
                 self.showFaces()
-            })
+        })
         
     }
     
@@ -213,8 +213,8 @@ class FirstViewController: UIViewController {
         
         let translation = recognizer.translationInView(self.view)
         
-        recognizer.view.center = CGPoint(x:recognizer.view.center.x,
-            y:recognizer.view.center.y + translation.y)
+        recognizer.view?.center = CGPoint(x:recognizer.view!.center.x,
+            y:recognizer.view!.center.y + translation.y)
         
         recognizer.setTranslation(CGPointZero, inView: self.view)
         
@@ -223,88 +223,88 @@ class FirstViewController: UIViewController {
             recognizer.state == UIGestureRecognizerState.Failed)
         {
             
-            if (recognizer.view.center.y < topThirdMark){
+            if (recognizer.view?.center.y < CGFloat(topThirdMark)){
                 
-                var center = Float(recognizer.view.center.x)
-                self.animateToYPos(recognizer.view, newYPos: 0 - (CGFloat(self.view.superview.bounds.height)/2), duration: 1.0)
-                rearrangeRemainingFaces(recognizer.view.tag, center: center)
+                var center = recognizer.view?.center.x
+                self.animateToYPos(recognizer.view!, newYPos: 0 - (CGFloat(self.view!.superview!.bounds.height)/2), duration: 1.0)
+                rearrangeRemainingFaces(recognizer.view!.tag, center: center!)
                 
-            } else if(recognizer.view.center.y > bottomThirdMark){
+            } else if(recognizer.view?.center.y > CGFloat(bottomThirdMark)){
                 
-                var center = Float(recognizer.view.center.x)
+                var center = recognizer.view?.center.x
                 
-                self.animateToYPos(recognizer.view, newYPos: self.view.bounds.height + (CGFloat(self.view.superview.bounds.height)*2), duration: 1.0)
-                rearrangeRemainingFaces(recognizer.view.tag, center: center)
+                self.animateToYPos(recognizer.view!, newYPos: self.view.bounds.height + (CGFloat(self.view.superview!.bounds.height)*2), duration: 1.0)
+                rearrangeRemainingFaces(recognizer.view!.tag, center: center!)
                 
-            } else if (bottomThirdMark > recognizer.view.center.y && recognizer.view.center.y > topThirdMark){
+            } else if (CGFloat(bottomThirdMark) > recognizer.view?.center.y && recognizer.view?.center.y > CGFloat(topThirdMark)){
                 
-                self.animateToYPos(recognizer.view, newYPos: Float(originalPosition), duration: 0.25)
+                self.animateToYPos(recognizer.view!, newYPos: CGFloat(originalPosition), duration: 0.25)
             }
         }
     }
     
-    func rearrangeRemainingFaces(tag: Int, center:Float){
+    func rearrangeRemainingFaces(tag: Int, center:CGFloat){
         
         if (swipes == 0){
             
-            if(center == leftImage.center.x) {
+            if(center == leftImage!.center.x) {
                 
-                animateToXPos(rightImage, newXPos: leftThirdMark)
+                animateToXPos(rightImage!, newXPos: leftThirdMark)
                 
-                animateToXPos(midImage, newXPos: rightThirdMark)
+                animateToXPos(midImage!, newXPos: rightThirdMark)
                 
                 leftIsGone = true;
             }
             
-            if(center == midImage.center.x) {
+            if(center == midImage!.center.x) {
                 
-                animateToXPos(leftImage, newXPos: rightThirdMark)
+                animateToXPos(leftImage!, newXPos: rightThirdMark)
                 
-                animateToXPos(rightImage, newXPos: leftThirdMark)
+                animateToXPos(rightImage!, newXPos: leftThirdMark)
                 
                 midIsGone = true;
             }
             
-            if(center == rightImage.center.x) {
+            if(center == rightImage!.center.x) {
                 
-                animateToXPos(leftImage, newXPos: rightThirdMark)
+                animateToXPos(leftImage!, newXPos: rightThirdMark)
                 
-                animateToXPos(midImage, newXPos: leftThirdMark)
+                animateToXPos(midImage!, newXPos: leftThirdMark)
                 
                 rightIsGone = true;
             }
             
         } else {
             
-            if ((center == leftImage.center.x) &&  midIsGone){
+            if ((center == leftImage!.center.x) && midIsGone){
                 
                 println("animateToXPos(rightImage, newXPos: rightImageCenter.x)")
-                animateToXPos(rightImage, newXPos: rightImageCenter.x)
+                animateToXPos(rightImage!, newXPos: CGFloat(rightImageCenter.x))
                 
-            } else if ((center == leftImage.center.x) && rightIsGone){
+            } else if ((center == leftImage!.center.x) && rightIsGone){
                 
                 println("animateToXPos(midImage, newXPos: rightImageCenter.x)")
-                animateToXPos(midImage, newXPos: rightImageCenter.x)
+                animateToXPos(midImage!, newXPos: CGFloat(rightImageCenter.x))
                 
-            }else if ((center == midImage.center.x) && leftIsGone){
+            }else if ((center == midImage!.center.x) && leftIsGone){
                 
                 println("animateToXPos(rightImage, newXPos: rightImageCenter.x)")
-                animateToXPos(rightImage, newXPos: rightImageCenter.x)
+                animateToXPos(rightImage!, newXPos: CGFloat(rightImageCenter.x))
                 
-            } else if ((center == midImage.center.x) && rightIsGone){
+            } else if ((center == midImage!.center.x) && rightIsGone){
                 
                 println("animateToXPos(leftImage, newXPos: leftImageCenter.x)")
-                animateToXPos(leftImage, newXPos: leftImageCenter.x)
+                animateToXPos(leftImage!, newXPos: CGFloat(leftImageCenter.x))
                 
-            } else if ((center == rightImage.center.x) && leftIsGone){
+            } else if ((center == rightImage!.center.x) && leftIsGone){
                 
                 println("animateToXPos(midImage, newXPos: rightImageCenter.x)")
-                animateToXPos(midImage, newXPos: leftImageCenter.x)
+                animateToXPos(midImage!, newXPos: CGFloat(leftImageCenter.x))
                 
-            } else if ((center == rightImage.center.x) && midIsGone){
+            } else if ((center == rightImage!.center.x) && midIsGone){
                 
                 println("animateToXPos(leftImage, newXPos: leftImageCenter.x)")
-                animateToXPos(leftImage, newXPos: leftImageCenter.x)
+                animateToXPos(leftImage!, newXPos: CGFloat(leftImageCenter.x))
                 
             }
             
@@ -318,18 +318,21 @@ class FirstViewController: UIViewController {
         }
     }
     
-    func animateToXPos(theView: UIView, newXPos: Float){
+    func animateToXPos(theView: UIView, newXPos: CGFloat){
         
-        UIView.animateWithDuration(0.5, animations: ({ () -> Void in
+        let timeInterval: NSTimeInterval = 0.5
+        
+        UIView.animateWithDuration(timeInterval) {
             theView.center.x = newXPos
-            }));
+        }
+    
     }
     
-    func animateToYPos(theView: UIView, newYPos: Float, duration: NSTimeInterval){
+    func animateToYPos(theView: UIView, newYPos: CGFloat, duration: NSTimeInterval){
         
         UIView.animateWithDuration(duration, animations: ({ () -> Void in
             theView.center.y = newYPos
-            }));
+        }));
     }
     
     func checkAnswer(tag: Int){
@@ -353,7 +356,7 @@ class FirstViewController: UIViewController {
     }
     
     func showResult(title:NSString, message:NSString){
-        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Yeah! Keep playing.", style: UIAlertActionStyle.Default, handler: { action in
             switch action.style{
             case .Default:
@@ -373,8 +376,8 @@ class FirstViewController: UIViewController {
                 println("destructive")
                 break
             }
-            }))
-
+        }))
+        
         
         self.presentViewController(alert, animated: true, completion: nil)
         
@@ -394,7 +397,7 @@ class FirstViewController: UIViewController {
                 println("destructive")
                 break
             }
-            }))
+        }))
     }
     
 }

@@ -40,6 +40,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "WiseMen.FirstViewController.startGame (WiseMen.FirstViewController)() -&gt; ()"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/FirstViewController.swift"
                   timestampString = "430444923.758914"
                   startingColumnNumber = "9223372036854775807"
@@ -54,6 +55,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "WiseMen.FirstViewController.(startGame (WiseMen.FirstViewController) -&gt; () -&gt; ()).(closure #1)"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/FirstViewController.swift"
                   timestampString = "430444923.759257"
                   startingColumnNumber = "9223372036854775807"
@@ -68,6 +70,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "reabstraction thunk helper from @callee_owned () -&gt; (@unowned ()) to @callee_owned (@in ()) -&gt; (@out ())"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/FirstViewController.swift"
                   timestampString = "430444923.759503"
                   startingColumnNumber = "9223372036854775807"
@@ -82,6 +85,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "reabstraction thunk helper from @callee_owned (@in ()) -&gt; (@out ()) to @callee_owned () -&gt; (@unowned ())"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/FirstViewController.swift"
                   timestampString = "430444923.759756"
                   startingColumnNumber = "9223372036854775807"
@@ -96,6 +100,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "reabstraction thunk helper from @callee_owned () -&gt; (@unowned ()) to @callee_unowned @objc_block () -&gt; (@unowned ())"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/FirstViewController.swift"
                   timestampString = "430444923.760044"
                   startingColumnNumber = "9223372036854775807"
@@ -208,6 +213,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "WiseMen.AppDelegate.window.getter : Swift.Optional&lt;ObjectiveC.UIWindow&gt;"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/AppDelegate.swift"
                   timestampString = "430445753.405062"
                   startingColumnNumber = "9223372036854775807"
@@ -222,6 +228,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "WiseMen.AppDelegate.init (WiseMen.AppDelegate.Type)() -&gt; WiseMen.AppDelegate"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/WiseMen/AppDelegate.swift"
                   timestampString = "430445753.4055"
                   startingColumnNumber = "9223372036854775807"
@@ -374,22 +381,6 @@
             startingLineNumber = "131"
             endingLineNumber = "131"
             landmarkName = "showFaces()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WiseMen/FirstViewController.swift"
-            timestampString = "430563146.780494"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "swipeFaceOutOfView(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -574,6 +565,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "WiseMen.QuoteSelector.tomQuotes.getter : Swift.Array&lt;Swift.String&gt;"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/QuoteSelector.swift"
                   timestampString = "430589377.019225"
                   startingColumnNumber = "9223372036854775807"
@@ -588,6 +580,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "WiseMen.QuoteSelector.init (WiseMen.QuoteSelector.Type)() -&gt; WiseMen.QuoteSelector"
                   moduleName = "WiseMen"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/antoniocarella/Documents/Xcode/WiseMen/QuoteSelector.swift"
                   timestampString = "430589377.019506"
                   startingColumnNumber = "9223372036854775807"
