@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Game-->
@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQr-d4-Ar2">
@@ -23,7 +23,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-eF-Gxx">
                                 <rect key="frame" x="20" y="183" width="435" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-1V-n9F">
@@ -115,8 +115,13 @@
                                 <exclude reference="4V3-hG-wUl"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2MG-G4-k8d"/>
-                                <exclude reference="K3N-2y-d7I"/>
+                                <exclude reference="0OK-cc-odP"/>
+                                <exclude reference="Gga-Bu-bjR"/>
+                                <exclude reference="IeB-FL-zFV"/>
+                                <exclude reference="uLQ-to-Dne"/>
+                                <exclude reference="5Ag-LP-4L9"/>
+                                <exclude reference="IgH-be-9Xy"/>
+                                <exclude reference="Yb1-hl-RC3"/>
                                 <exclude reference="UBb-Y4-wBM"/>
                                 <exclude reference="Wkb-aN-jAe"/>
                                 <exclude reference="ZTv-hG-zEG"/>
@@ -124,33 +129,8 @@
                                 <exclude reference="mL9-3A-CAz"/>
                                 <exclude reference="qT0-Ef-dZu"/>
                                 <exclude reference="qWi-WW-3ur"/>
-                                <exclude reference="IgH-be-9Xy"/>
-                                <exclude reference="Yb1-hl-RC3"/>
-                                <exclude reference="5Ag-LP-4L9"/>
-                                <exclude reference="Gga-Bu-bjR"/>
-                                <exclude reference="IeB-FL-zFV"/>
-                                <exclude reference="uLQ-to-Dne"/>
-                                <exclude reference="0OK-cc-odP"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="2MG-G4-k8d"/>
-                                <include reference="K3N-2y-d7I"/>
-                                <include reference="UBb-Y4-wBM"/>
-                                <include reference="Wkb-aN-jAe"/>
-                                <include reference="ZTv-hG-zEG"/>
-                                <include reference="ha3-Sf-O0s"/>
-                                <include reference="mL9-3A-CAz"/>
-                                <include reference="qT0-Ef-dZu"/>
-                                <include reference="qWi-WW-3ur"/>
-                                <include reference="IgH-be-9Xy"/>
-                                <include reference="Yb1-hl-RC3"/>
-                                <include reference="5Ag-LP-4L9"/>
-                                <include reference="Gga-Bu-bjR"/>
-                                <include reference="IeB-FL-zFV"/>
-                                <include reference="uLQ-to-Dne"/>
-                                <include reference="0OK-cc-odP"/>
+                                <exclude reference="2MG-G4-k8d"/>
+                                <exclude reference="K3N-2y-d7I"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -160,9 +140,29 @@
                                 <include reference="KVO-37-gZK"/>
                                 <include reference="4V3-hG-wUl"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="0OK-cc-odP"/>
+                                <include reference="Gga-Bu-bjR"/>
+                                <include reference="IeB-FL-zFV"/>
+                                <include reference="uLQ-to-Dne"/>
+                                <include reference="5Ag-LP-4L9"/>
+                                <include reference="IgH-be-9Xy"/>
+                                <include reference="Yb1-hl-RC3"/>
+                                <include reference="UBb-Y4-wBM"/>
+                                <include reference="Wkb-aN-jAe"/>
+                                <include reference="ZTv-hG-zEG"/>
+                                <include reference="ha3-Sf-O0s"/>
+                                <include reference="mL9-3A-CAz"/>
+                                <include reference="qT0-Ef-dZu"/>
+                                <include reference="qWi-WW-3ur"/>
+                                <include reference="2MG-G4-k8d"/>
+                                <include reference="K3N-2y-d7I"/>
+                            </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Game" image="first" id="acW-dT-cKf"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="leftImage" destination="cNk-1V-n9F" id="xuw-Sy-0g5"/>
                         <outlet property="midImage" destination="KVO-37-gZK" id="WL6-gc-z9C"/>
@@ -199,26 +199,26 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="135" y="219" width="210" height="42"/>
+                                <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem id="WaP-O7-m87"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="132" y="269" width="216" height="17"/>
+                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -243,6 +243,8 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
